@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26"
+    defaultConfig {
+        applicationId "com.ftb.app"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 3
+        versionName "1.0.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            pseudoLocalesEnabled false
+            zipAlignEnabled false
+        }
+        debug {
+            debuggable false
+            zipAlignEnabled false
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude '.txt'
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    afterEvaluate {
+        tasks.matching {
+            it.name.startsWith('dex')
+        }.each { dx ->
+            if (dx.additionalParameters == null) {
+                dx.additionalParameters = ['--multi-dex']
+            } else {
+                dx.additionalParameters += '--multi-dex'
+            }
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:support-vector-drawable:26.+'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.android.support:multidex:1.0.1'
+    compile files('/Users/mangoo/AndroidStudioProjects/FTB/libs/bitcoinj-core-0.15-SNAPSHOT-bundled.jar')
+}

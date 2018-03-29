@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              tools:context="com.ftb.app.RegisterActivity">
+
+    <!-- Login progress -->
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="创建钱包"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/reg_new_pwd_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="钱包密码，请输入6位以上"
+            android:inputType="textPassword"
+            android:paddingBottom="15dp"/>
+
+        <Button
+            android:id="@+id/reg_start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorButton"
+            android:text="创建钱包"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/light_gray_bg"
+            android:padding="10dp"
+            android:text="重要提示：您的钱包密码用于加密私钥和发送交易时安全确认用途，没有密码钱包将不能解锁，没有重置和找回功能，请妥善保管。"
+            android:textColor="@android:color/holo_red_light"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="已有备份的私钥或密语，请选择导入钱包进行恢复。"
+            android:textAlignment="textStart"/>
+
+        <Button
+            android:id="@+id/import_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/light_gray_bg"
+            android:shadowColor="@android:color/transparent"
+            android:text="导入钱包"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

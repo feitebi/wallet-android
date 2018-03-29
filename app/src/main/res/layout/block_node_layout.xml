@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+        tools:context="com.ftb.app.BackupActivity">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="区块节点"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"/>
+
+    <ImageButton
+        android:id="@+id/node_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/leftarrow"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="当前有效节点"/>
+
+            <TextView
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableRight="@drawable/check"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="https://api.feitebi.com/"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorButtonNormal"
+                android:text="TextView"/>
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:drawableRight="@drawable/check"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="https://api2.feitebi.com/"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorButtonNormal"
+                android:text="TextView"/>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="陆续会有更多节点参与，并且用户可以自由选择连接，保障用户的数字资产安全可靠。"/>
+
+        </LinearLayout>
+
+</FrameLayout>

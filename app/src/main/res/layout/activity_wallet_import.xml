@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              tools:context="com.ftb.app.WalletImportActivity">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="导入钱包"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/import_seed_text"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:ems="10"
+            android:hint="请输入种子密语或者私钥"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="8sp"/>
+
+        <Button
+            android:id="@+id/import_by_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/light_gray_bg"
+            android:text="立即导入"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/import_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/leftarrow"/>
+
+</FrameLayout>
